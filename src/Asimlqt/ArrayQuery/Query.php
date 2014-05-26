@@ -57,7 +57,7 @@ class Query
      * immediately so they can't be used in any subsequent calls.
      * 
      * @param type $columns
-     * @return \Asimlqt\Piq\Piq
+     * @return \Asimlqt\ArrayQuery\Query
      */
     public function select($columns)
     {
@@ -75,7 +75,7 @@ class Query
      * @param string $column
      * @param array  $values
      * 
-     * @return \Asimlqt\Piq\Piq
+     * @return \Asimlqt\ArrayQuery\Query
      */
     public function filter($column, array $values)
     {
@@ -92,7 +92,7 @@ class Query
      * 
      * @param callback $closure
      * 
-     * @return \Asimlqt\Piq\Piq
+     * @return \Asimlqt\ArrayQuery\Query
      */
     public function where($closure)
     {
@@ -110,7 +110,7 @@ class Query
      * @param array $groupByColumns
      * @param array $sumColumns
      * 
-     * @return \Asimlqt\Piq\Piq
+     * @return \Asimlqt\ArrayQuery\Query
      */
     public function groupAndSum($groupByColumns, $sumColumns)
     {
@@ -135,7 +135,7 @@ class Query
      * @param array    $columns
      * @param callback $closure
      * 
-     * @return \Asimlqt\Piq\Piq
+     * @return \Asimlqt\ArrayQuery\Query
      */
     public function groupBy($columns, $closure = null)
     {
@@ -166,7 +166,7 @@ class Query
      * @param array $groupByColumns
      * @param string $maxColumn
      * 
-     * @return \Asimlqt\Piq\Piq
+     * @return \Asimlqt\ArrayQuery\Query
      */
     public function groupByMax($groupByColumns, $maxColumn)
     {
@@ -178,7 +178,7 @@ class Query
      * @param array $groupByColumns
      * @param string $minColumn
      * 
-     * @return \Asimlqt\Piq\Piq
+     * @return \Asimlqt\ArrayQuery\Query
      */
     public function groupByMin($groupByColumns, $minColumn)
     {
@@ -191,7 +191,7 @@ class Query
      * @param type $minMaxColumn
      * @param string $type
      * 
-     * @return \Asimlqt\Piq\Piq
+     * @return \Asimlqt\ArrayQuery\Query
      */
     protected function groupByMinMax($groupByColumns, $minMaxColumn, $type)
     {
@@ -212,7 +212,7 @@ class Query
      * 
      * @param type $column
      * 
-     * @return \Asimlqt\Piq\Piq
+     * @return \Asimlqt\ArrayQuery\Query
      */
     public function max($column)
     {
@@ -237,7 +237,7 @@ class Query
      * 
      * @param array $order
      * 
-     * @return \Asimlqt\Piq\Piq
+     * @return \Asimlqt\ArrayQuery\Query
      */
     public function orderBy(array $order)
     {
