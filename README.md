@@ -47,6 +47,7 @@ Select is similar to a select in an sql query, It only keeps the columns which a
 $query->select(array('city', 'population'));
 ```
 
+
 #### filter($column, array $values)
 
 Filter removes columns which don't have one of the specified values. It is similar to a "WHERE IN" clause in mysql.
@@ -54,6 +55,7 @@ Filter removes columns which don't have one of the specified values. It is simil
 ```php
 $query->filter('city', array('London', 'Paris'));
 ``` 
+
 
 #### where($closure)
 
