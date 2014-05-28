@@ -84,7 +84,7 @@ $query->groupBy(array('continent', 'country'), function($oldRow, $newRow) {
 
 #### orderBy(array $order)
 
-Allows order of the data by one or more columns. The key of the array is the column name and the value is either SORT_ASC or SORT_DESC.
+Allows ordering of the data by one or more columns. The key of the array is the column name and the value is either SORT_ASC or SORT_DESC.
 
 ```php
 $query->orderBy(array('continent' => SORT_ASC, 'population' => SORT_DESC));
