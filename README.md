@@ -64,3 +64,28 @@ The where function gives the freedom of filtering data in any way the user likes
 ```php
 $query->where(function($row) { return $row['population'] > 5000000; });
 ```
+
+#### groupBy($columns, $closure)
+
+Allows grouping of data so that there will be only one row for each unique set of the specified column values.
+
+```php
+$query->groupBy(array('continent', 'country'));
+```
+
+You can optionally specify a closure as the second argument. If a closure is specified then it will be called each time a duplicate row is found for the specified columns. The return value must be a row. e.g.
+
+```php
+$query->groupBy(array('continent', 'country'), function($oldRow, $newRow) {
+	$oldRow['population'] += $newRow['population'];
+	return $oldRow;
+});
+```
+
+#### orderBy(array $order)
+
+Allows order of the data by one or more columns. The key of the array is the column name and the value is either SORT_ASC or SORT_DESC.
+
+```php
+$query->orderBy(array('continent' => SORT_ASC, 'population' => SORT_ASC));
+```
